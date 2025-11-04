@@ -26,14 +26,14 @@ async function generateKHQR(amount, currency = "KHR", orderId = "ORDER_00001") {
       currency: currency === "KHR" ? khqrData.currency.khr : khqrData.currency.usd,
       amount: parseFloat(amount),
       billNumber: orderId,
-      storeLabel: "Chandev",
+      storeLabel: "Chandev", //update your name store or name you want.
       terminalLabel: "Online Payment",
       expirationTimestamp,
     };
 
     const individualInfo = new IndividualInfo(
       BAKONG_ACCOUNT_USERNAME,
-      "Chandev",
+      "Chandev", //update to store name or name you want.
       "Phnom Penh",
       optionalData
     );
